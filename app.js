@@ -152,7 +152,7 @@ $(document).ready(function () {
         // Event Listener on Submit btn to store user score
         $("#btnSubmit").on("click", function (e) {
             e.preventDefault();
-            // Conditionnal to set the score to zero if the score is actually lower than zero
+            // Conditionnal to set score to zero
             if (secondsLeft < 0) {
                 secondsLeft = 0;
             }
@@ -186,7 +186,7 @@ $(document).ready(function () {
         localStorage.setItem("scores", JSON.stringify(localScores));
     };
 
-    // Show highscore function, using the sorted array of score and limiting to 10 displayed score
+    // Limits the highscore to show only 10 scores
     function showHighscores() {
         var scores = JSON.parse(window.localStorage.getItem("scores"));
         scores = sortScores(scores)
@@ -211,7 +211,8 @@ $(document).ready(function () {
         }
 
     }
-    // Sort score to get the highest ones on top
+
+    // Function sorts high scores
     function sortScores(scores) {
         if (!scores) {
             return [];
