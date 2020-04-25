@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    background-image: url("../02-Homework/Assets/background.jpg");
+    background-image: fixed;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+}
+*{
+    box-sizing: border-box;
+}
+
+.custom-box{
+    max-width: 800px;
+    background-color: white;
+    margin: 30px auto;
+    padding: 50 px 40 px;
+    border-radius: 10px;
+}
+
+.quiz-home-box{
+    text-align: center;
+}
+
+.quiz-home-box h4{
+    font-size: 30px;
+}
+
+.btn{
+    margin-bottom: 10px;
+}
