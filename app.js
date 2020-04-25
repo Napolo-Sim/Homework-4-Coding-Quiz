@@ -8,7 +8,7 @@ $(document).ready(function () {
     }
 
     // Array of objects containing each page with the question associated
-    var quizz = [
+    var quiz = [
         { // object --> page 1
             title: "Question 1:",
             description: "What is a conditional?",
@@ -90,26 +90,26 @@ $(document).ready(function () {
     function showPage(page) {
         clearContent("main");
         // Calling the page to load
-        if (page < quizz.length) {
-            var quizzObject = quizz[page];
+        if (page < quiz.length) {
+            var quizObject = quiz[page];
             // Creating elements for question
-            $("#questionContainer").prepend(`<h1 id="questionNumber">${quizzObject.title}</h1>
-                <p id="questionText" class="">${quizzObject.description}</p>
+            $("#questionContainer").prepend(`<h1 id="questionNumber">${quizObject.title}</h1>
+                <p id="questionText" class="">${quizObject.description}</p>
                 <ul id="questionList">
-                    <li><button id="a1" type="button" class="btn btn-primary w-25">${quizzObject.possibleAnswers[0]}</button></li>
-                    <li><button id="a2" type="button" class="btn btn-primary w-25">${quizzObject.possibleAnswers[1]}</button></li>
-                    <li><button id="a3" type="button" class="btn btn-primary w-25">${quizzObject.possibleAnswers[2]}</button></li>
-                    <li><button id="a4" type="button" class="btn btn-primary w-25">${quizzObject.possibleAnswers[3]}</button></li>
+                    <li><button id="a1" type="button" class="btn btn-primary w-25">${quizObject.possibleAnswers[0]}</button></li>
+                    <li><button id="a2" type="button" class="btn btn-primary w-25">${quizObject.possibleAnswers[1]}</button></li>
+                    <li><button id="a3" type="button" class="btn btn-primary w-25">${quizObject.possibleAnswers[2]}</button></li>
+                    <li><button id="a4" type="button" class="btn btn-primary w-25">${quizObject.possibleAnswers[3]}</button></li>
                 </ul>
                 `);
             // Event listeners on 
             $("li").on("click", function () {
                 // verifyAnswer()
                 var answer = $(this).text();
-                if (answer === quizzObject.correctAnswer) {
+                if (answer === quizObject.correctAnswer) {
                     showAlert("Correct", "success");
                 } else {
-                    showAlert("Wrong", "danger")
+                    showAlert("Wrong -10 Seconds", "danger")
                     secondsLeft -= 10;
                 }
 
@@ -119,7 +119,7 @@ $(document).ready(function () {
             })
         } else {
             stopTimer();
-            endQuizz();
+            endQuiz();
         }
 
 
@@ -136,12 +136,12 @@ $(document).ready(function () {
 
     }
 
-    function endQuizz() {
+    function endQuiz() {
 
         $("#questionContainer").prepend(`        
             <form>
                 <div class="form-group m-2">
-                    <input id="textInput" class="form-control mb-2" type="text" placeholder="Input your Initials" />
+                    <input id="textInput" class="form-control mb-2" type="text" placeholder="Input your name" />
                     <div class="text-right">
                         <button id="btnSubmit" class="btn btn-primary" type="submit" value="Submit">Submit</button>
                     </div>
@@ -158,7 +158,7 @@ $(document).ready(function () {
             }
             // Conditionnal to verify if the input is blank
             if ($("#textInput").val() === "") {
-                showAlert("No input found, please input initials", "danger");
+                showAlert("No input found, please input name", "danger");
             }
 
 
