@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" -->
+    <!-- integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 
     <title>Coding Quiz!</title>
 </head>
@@ -15,10 +15,10 @@
 
     <div class="quiz-home-box custom-box">
         <h4>You will have 15 seconds to answer each question.</h4>
-        <button type="button" class="start-quiz-btn btn btn-outline-primary">Click Here to Start!</button>
+        <button type="button" class="start-quiz-btn btn ">Click Here to Start!</button>
     </div>
 
-    <div class="quiz-boz custom-box">
+    <div class="quiz-box custom-box">
         <div class="stats">
             <div class="quiz-time">
                 <div class="remaining-time">15</div>
@@ -28,9 +28,18 @@
                 <span class="correct-answers">0</span>
             </div>
         </div>
-        <div class="question-box">
-            <div class="current-question-num"></div>
+        <div class="question-box ">
+            <div class="current-question-num">1 of 6</div>
             <div class="question-text">Example Question</div>
+        </div>
+        <div class="option-box">
+            <div class="option">True</div>
+            <div class="option">False</div>
+        </div>
+        <div class="answer-description">Example answer description</div>
+        <div class="next-question">
+            <button type="button" class="next-question-btn btn ">Next Question</button>
+            <button type="button" class="see-result-btn btn ">Quiz Results</button>
         </div>
     </div>
 

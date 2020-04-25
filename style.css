@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+
+
 body{
     margin: 0;
     background-image: url("../02-Homework/Assets/background.jpg");
-    background-image: fixed;
-    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Manrope', sans-serif;
+    /* background-size: cover; */
     /* background-repeat: no-repeat; */
 }
+
 *{
     box-sizing: border-box;
 }
@@ -19,12 +24,44 @@ body{
 
 .quiz-home-box{
     text-align: center;
+    display: none;
 }
 
 .quiz-home-box h4{
     font-size: 30px;
+    font-weight: 400;
+    margin: 0 0 30px;
 }
 
 .btn{
+    background-color: aquamarine;
+    border: 2px solid powderblue;
+    padding: 14px 40px;
+    color: white;
+    font-size: 20px;
+    border-radius: 30px;
     margin-bottom: 10px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.quiz-box{
+    /* text-align: center; */
+}
+
+.quiz-box .question-box{
+    background-color: rgb(57, 154, 238);
+    padding: 40px 30px;
+    margin-top: 40px;
+    font-size: 28px;
+    border-radius: 15px;
+    border: 2px solid;
+}
+
+.quiz-box .question-box .current-question-num{
+    height: 70px;
+    width: 70px;
+}
+
+.quiz-box .question-box .question-text{
+    font-size: 28px;
 }
