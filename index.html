@@ -13,12 +13,12 @@
 
 <body>
 
-    <div class="quiz-home-box custom-box">
+    <div id="homeBox" class="quiz-home-box custom-box">
         <h4>You will have 15 seconds to answer each question.</h4>
-        <button type="button" class="start-quiz-btn btn ">Click Here to Start!</button>
+        <button type="button" id="startQuizBtn" class="start-quiz-btn btn ">Click Here to Start!</button>
     </div>
 
-    <div class="quiz-box custom-box">
+    <div id="quizBox" class="quiz-box custom-box">
         <div class="stats">
             <div class="quiz-time">
                 <div class="remaining-time">15</div>
@@ -28,7 +28,7 @@
                 <span class="correct-answers">0</span>
             </div>
         </div>
-        <div class="question-box">
+        <div id="questionBox" class="question-box">
             <div class="current-question-num">1 of 6</div>
             <div class="question-text">Example Question</div>
         </div>
@@ -45,13 +45,18 @@
         </div>
     </div>
 
+    <div class="quiz-over-box custom-box">
+        <h1>Quiz Results</h1>
+        <h4>Total</h4>
+    </div>
 
 
 
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.slim.js"
+        integrity="sha256-sCexhaKpAfuqulKjtSY7V9H7QT0TCN90H+Y5NlmqOUE=" crossorigin="anonymous"></script>
     <script src="./app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

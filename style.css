@@ -56,6 +56,7 @@ outline: none;
     padding-left: 50px;
     padding-top: 30px;
     padding-right: 50px;
+    display: none;
 }
 
 .quiz-box .stats{
@@ -153,6 +154,9 @@ text-align: right;
     display: none;
 }
 
+.quiz-over-box{
+    display: none;
+}
 
 
 
